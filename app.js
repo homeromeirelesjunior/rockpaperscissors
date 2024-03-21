@@ -7,6 +7,8 @@ const computerSelection = () => {
 }
 
 let message = '';
+let pointsPlayer = 0;
+let pointsComputer = 0;
 
 const playRPSGame = () => {
   let computerChoice = computerSelection();
@@ -44,30 +46,22 @@ const playRPSGame = () => {
     message = 'You lose! Rock beats Scissors!'
   }
 
+  if (message.includes('lose')) {
+    pointsComputer++;
+  }
+
+  if (message.includes('win')) {
+    pointsPlayer++;
+  }  
+
   console.log(message);
+  console.log(`Player points: ${pointsPlayer} | Computer points: ${pointsComputer}`);
 
   return message;
 }
 
-const playGame = () => {
-  let i = 1;
-  let pointsPlayer = 0;
-  let pointsComputer = 0;
-
-  do {
-    playRPSGame();
-    i++;
-    if (message.includes('lose')) {
-      pointsComputer++;
-    }
-
-    if (message.includes('win')) {
-      pointsPlayer++;
-    }
-  } while(i > 6);
-
-
-  console.log(pointsPlayer, pointsComputer);
-}
-
-playGame();
+playRPSGame();
+playRPSGame();
+playRPSGame();
+playRPSGame();
+playRPSGame();
