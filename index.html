@@ -8,19 +8,25 @@
     ul {
       list-style: none;
     }
-    li {
-
-    }
   </style>
 </head>
 <body>
-  <h1>Rock Paper Scissors Game</h1>
+  <div>
+    <h1>Rock Paper Scissors Game</h1>
 
-  <ul style="display: flex;">
-    <li><button data-rock >Rock</button></li>
-    <li><button data-paper>Paper</button></li>
-    <li><button data-scissors>Scissors</button></li>
-  </ul>
+    <div id="current-score">
+      
+    </div>
+
+    <ul style="display: flex;">
+      <li><button style="margin: 0 20px" id="rock">Rock</button></li>
+      <li><button style="margin: 0 20px" id="paper">Paper</button></li>
+      <li><button style="margin: 0 20px" id="scissors">Scissors</button></li>
+    </ul>
+    <div id="results">
+
+    </div>
+  </div>
 
   <script src="app.js"></script>
 </body>
